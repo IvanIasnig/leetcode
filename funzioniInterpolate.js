@@ -12,6 +12,6 @@ var compose = function (functions) {
   };
 };
 
-const fn = compose([]);
+const fn = compose([(x) => x + 1, (x) => 2 * x, (x) => 3 * x]);
 
 console.log(fn(4));
