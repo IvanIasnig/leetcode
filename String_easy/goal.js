@@ -1,6 +1,6 @@
 var interpret = function(command) {
-    let newStr = command.replace(/\(\)/g, 'o');
-    let goal = newStr.replace(/\(al\)/g, 'al');
+    let newStr = command.replaceAll("()", 'o');
+    let goal = newStr.replaceAll("(al)", 'al');
     return goal
 };
 
