@@ -30,19 +30,3 @@ var flipAndInvertImage = function (image) {
 console.log(
   flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]])
 );
-
-// x = [1,1,0],[1,0,1],[0,0,0]
-
-// ris[i] = x[sinistra]
-// ris [ris.length -1] = x[destra]
-
-// if (x[sinistra]) {
-//     x[sinistra] = 1;
-//   } else {
-//     x[sinistra] = 0;
-//   }
-//   if (x[destra]) {
-//     x[destra] = 1;
-//   } else {
-//     x[destra] = 0;
-//   }
