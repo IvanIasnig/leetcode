@@ -1,0 +1,3 @@
+devo imparare a svolgere meglio gli esercizi coi twopointers 
+più o meno il procedimento lo sto seguendo, ma non credo che sia ottimizzato bene
+https://www.youtube.com/watch?v=-gjxg6Pln50

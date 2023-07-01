@@ -22,4 +22,28 @@ var reverseWords = function (s) {
 
 console.log(reverseWords("vector<string> split (string s, char delimiter)"));
 
-//return rr.toString().replaceAll(",","");
+//l'esercizio fatto da me non utilizza correttamente la tenica, per farlo correttamente avrei dovuto fare che: 
+
+// var reverseWords = function(s) {
+//     let words = s.split(' ');
+    
+//     for (let i = 0; i < words.length; i++) {
+//         let start = 0;
+//         let end = words[i].length - 1;
+//         let arr = words[i].split('');
+        
+//         while (start < end) {
+//             let temp = arr[start];
+//             arr[start] = arr[end];
+//             arr[end] = temp;
+
+//             start++;
+//             end--;
+//         }
+        
+//         words[i] = arr.join('');
+//     }
+    
+//     return words.join(' ');
+// };
+
