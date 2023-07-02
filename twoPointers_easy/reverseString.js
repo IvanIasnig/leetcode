@@ -21,8 +21,8 @@ console.log(reverseString(["h","e","l","l","o"]))
 /*
 
 L'approccio che stai utilizzando è corretto e in linea con l'idea generale del metodo "two pointers". Tuttavia, l'implementazione potrebbe essere ottimizzata.
- Stai utilizzando un array aggiuntivo `m` per memorizzare temporaneamente i valori dell'array `s`. Questo è superfluo e viola il requisito "O(1) extra memory". 
- Invece, puoi utilizzare una variabile temporanea per eseguire lo scambio. Ecco come potrebbe sembrare:
+Stai utilizzando un array aggiuntivo `m` per memorizzare temporaneamente i valori dell'array `s`. Questo è superfluo e viola il requisito "O(1) extra memory". 
+Invece, puoi utilizzare una variabile temporanea per eseguire lo scambio. Ecco come potrebbe sembrare:
 
 
 var reverseString = function(s) {
