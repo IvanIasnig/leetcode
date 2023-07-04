@@ -1,15 +1,12 @@
 var mergeArrays = function (nums1, nums2) {
   let p1 = 0;
   let p2 = 0;
-
   let x = nums1.length - 1;
   let lung1 = nums1[x][0];
   let y = nums2.length - 1;
   let lung2 = nums2[y][0];
-
   let cicli = lung1 < lung2 ? lung2 : lung1;
   let ris = [];
-
 
   for (i = 0; i < cicli; i++) {
 
@@ -49,7 +46,8 @@ console.log(
     [
       [3, 3],
       [4, 3],
-      [5,6]
+      [5,6],
+      [6,3]
     ]
   )
 );
