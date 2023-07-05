@@ -1,6 +1,5 @@
 var countGoodSubstrings = function(s) {
-    s = s.split("")
-    let currString = [];
+    let currString = "";
     let ris = 0;
     for (i = 0; i < s.length; i++) {
       currString = currString + s[i];
