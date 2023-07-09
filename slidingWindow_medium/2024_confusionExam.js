@@ -1,13 +1,12 @@
 var maxConsecutiveAnswers = function (answerKey, k) {
   answerKey = answerKey.split("");
   var consecBool = function (TF) {
-
     let currSum = 0;
     let maxOutput = 0;
     let start = 0;
     let end = 0;
     let f = 0;
-    
+
     while (end < answerKey.length) {
       currSum++;
       if (answerKey[end] == TF) {
