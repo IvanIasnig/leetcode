@@ -1,26 +1,48 @@
-/**
- * @param {number[][]} grid
- * @return {number}
- */
+// la soluzione non è ottimale perchè ho usato il reverse per ogni array, potre costruirlo al contrario ma non ho voglia, ho usato il reverse perc avere più ordine mentsale
+// var countNegatives = function (grid) {
+//     let ris = 0;
+
+//   for (i = 0; i < grid.length; i++) {
+//     let arr = grid[i].reverse();
+//     let left = 0;
+//     let right = arr.length - 1;
+
+//     while (left <= right) {
+//       let middle = left + Math.floor((right - left) / 2);
+//       if ( arr[middle] < 0) {
+//         ris= ris + middle - left + 1
+//         left = middle + 1;
+//         console.log(ris)
+//       } else {
+//         right = middle - 1;
+//       }
+//     }
+//   }
+//   return ris
+// };
+
+//soluzione rifatta meglio
+
 var countNegatives = function (grid) {
-    let res = 0;
+  let ris = 0;
 
   for (i = 0; i < grid.length; i++) {
-    let arr = grid[i].reverse();
-    let lower = 0;
-    let upper = arr.length - 1;
+    let arr = grid[i];
+    let left = 0;
+    let right = arr.length - 1;
 
-    while (lower <= upper) {
-      let middle = lower + Math.floor((upper - lower) / 2);
-return middle
-      if ( arr[middle] < 0) {
-        
-        upper = middle - 1;
+    while (left <= right) {
+      let middle = left + Math.floor((right - left) / 2);
+      if (arr[middle] < 0) {
+        ris = ris + right - middle + 1;
+        right = middle - 1;
+        console.log(ris);
       } else {
-        lower = middle + 1;
+        left = middle + 1;
       }
     }
   }
+  return ris;
 };
 
 console.log(
