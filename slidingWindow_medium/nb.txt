@@ -1,0 +1,2 @@
+alcuni esercizi se pur giusti non li ho svolti in maniera ottimanle
+perchè sono andato a ciclare nella window, cosa che mi aumento O(n)

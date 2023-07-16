@@ -1,5 +1,6 @@
 var maxConsecutiveAnswers = function (answerKey, k) {
   answerKey = answerKey.split("");
+  
   var consecBool = function (TF) {
     let currSum = 0;
     let maxOutput = 0;
