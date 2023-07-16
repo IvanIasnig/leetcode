@@ -36,7 +36,6 @@ var countNegatives = function (grid) {
       if (arr[middle] < 0) {
         ris = ris + right - middle + 1;
         right = middle - 1;
-        console.log(ris);
       } else {
         left = middle + 1;
       }
