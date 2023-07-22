@@ -1,13 +1,12 @@
-// var rec = function (num) {
+var rec = function (num) {
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  a = num - 1;
+  return num * rec(a);
+};
 
-//     if(num === 0 || num === 1){
-//         return 1;
-//     }
-//     a = num - 1
-//     return num * rec(a)
-// }
-
-// console.log(rec(5))
+console.log(rec(5));
 
 var rec2 = (num) => {
   if (num === 0 || num === 1) {
