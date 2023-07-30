@@ -26,8 +26,8 @@ let node12 = new ListNode(1);
 node11.next = node12;
 
 var oddEvenList = function (head) {
-  if (!head){
-    return null
+  if (!head) {
+    return null;
   }
 
   let newNode = new ListNode();
@@ -45,18 +45,16 @@ var oddEvenList = function (head) {
       newNode.next = null;
     }
   }
-  let res =odd
-  while(odd){
-    
-    if(!odd.next){
-      odd.next =even.next
-      break
+  let res = odd;
+  while (odd) {
+    if (!odd.next) {
+      odd.next = even.next;
+      break;
     }
-    odd = odd.next
+    odd = odd.next;
   }
 
   return res; //dispari
-
 };
 
 console.dir(oddEvenList(node1), { depth: null });
