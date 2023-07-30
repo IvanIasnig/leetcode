@@ -26,11 +26,7 @@ var swapPairs = function (head) {
   let newNode = head;
 
   var recFunction = function (par) {
-    if (!par) {
-      return par;
-    }
-
-    if (!par.next) {
+    if (!par || !par.next) {
       return par;
     }
 
