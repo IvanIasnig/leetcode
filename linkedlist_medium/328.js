@@ -21,7 +21,15 @@ node5.next = node6;
 node6.next = node7;
 node7.next = node8;
 
+let node11 = new ListNode(1);
+let node12 = new ListNode(1);
+node11.next = node12;
+
 var oddEvenList = function (head) {
+  if (!head){
+    return null
+  }
+
   let newNode = new ListNode();
   let even = newNode;
   let odd = head;
@@ -37,9 +45,19 @@ var oddEvenList = function (head) {
       newNode.next = null;
     }
   }
-  //mi manca da fare l'intersezione
-  return odd; //dispari
-  return even; //pari
+  let res =odd
+  while(odd){
+    
+    if(!odd.next){
+      odd.next =even.next
+      break
+    }
+    odd = odd.next
+  }
+
+  return res; //dispari
+
 };
 
 console.dir(oddEvenList(node1), { depth: null });
+console.dir(oddEvenList(node11), { depth: null });
