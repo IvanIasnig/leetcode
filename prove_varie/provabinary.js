@@ -18,7 +18,7 @@ node2.right = node5;
 node3.right = node6;
 
 var depthFirstValues = (head) => {
-  if (root === null) return [];
+  if (head === null) return [];
 
   let stack = [head];
   let result = [];
@@ -44,9 +44,45 @@ una volta che tutti i nodi right saranno stati estratti il push avverrà solo su
 
 var recDepthFirstValues = (head) => {
   if (head === null) return [];
-  const leftValues = depthFirstValues(head.left);
-  const rightValues = depthFirstValues(head.right);
-  return [head.val, ...leftValues, rightValues];
+  const leftValues = recDepthFirstValues(head.left);
+  const rightValues = recDepthFirstValues(head.right);
+  return [head.val, ...leftValues, ...rightValues];
 };
 
-console.dir(recDepthFirstValues(node1), { depth: null });
+//console.dir(recDepthFirstValues(node1), { depth: null });
+
+//ES2
+const breadthFirstValues = (head) => {
+  if (head === null) return [];
+  const queue = [head];
+  const values = [];
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    values.push(current.val);
+    if (current.left) queue.push(current.left);
+    if (current.right) queue.push(current.right);
+  }
+  return values;
+};
+
+//console.dir(breadthFirstValues(node1), { depth: null });
+
+var recBreadthFirstValues = (head) => {
+  if (head === null) return [];
+  const leftValues = recDepthFirstValues(head.left);
+  const rightValues = recDepthFirstValues(head.right);
+  return [head.val, ...leftValues, ...rightValues];
+};
+
+//console.dir(recBreadthFirstValues(node1), { depth: null });
+
+// Es3
+var treeIncludes = (head, value) => {
+  if (head === null) return false;
+  if (head.val === value) return true;
+
+  return treeIncludes(head.left, value) || treeIncludes(head.left, value);
+};
+
+console.log(treeIncludes(node1, 4));
