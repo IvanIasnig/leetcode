@@ -161,3 +161,5 @@ var breadthMax = (head) => {
   }
   return maxGlobal;
 };
+
+console.log(breadthMax(node1));
