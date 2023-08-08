@@ -91,7 +91,7 @@ var treeIncludes = (head, value) => {
 
 var sum = (head) => {
   if (head === null) return 0;
-  return head.val + sum(head.left) + sum(head.left);
+  return head.val + sum(head.left) + sum(head.right);
 };
 
 console.log(sum(node1));
