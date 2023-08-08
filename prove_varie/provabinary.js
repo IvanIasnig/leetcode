@@ -51,7 +51,7 @@ var recDepthFirstValues = (head) => {
 
 //console.dir(recDepthFirstValues(node1), { depth: null });
 
-//ES2
+// ---------------------- ES2
 const breadthFirstValues = (head) => {
   if (head === null) return [];
   const queue = [head];
@@ -77,7 +77,7 @@ var recBreadthFirstValues = (head) => {
 
 //console.dir(recBreadthFirstValues(node1), { depth: null });
 
-// Es3
+// ----------------- Es3
 var treeIncludes = (head, value) => {
   if (head === null) return false;
   if (head.val === value) return true;
@@ -85,4 +85,79 @@ var treeIncludes = (head, value) => {
   return treeIncludes(head.left, value) || treeIncludes(head.left, value);
 };
 
-console.log(treeIncludes(node1, 4));
+// console.log(treeIncludes(node1, 4));
+
+//----------- es 4
+
+var sum = (head) => {
+  if (head === null) return 0;
+  return head.val + sum(head.left) + sum(head.left);
+};
+
+console.log(sum(node1));
+
+const breadthSum = (head) => {
+  if (head === null) return 0;
+  const queue = [head];
+  let sum = 0;
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    sum += current.val;
+    if (current.left) queue.push(current.left);
+    if (current.right) queue.push(current.right);
+  }
+  return sum;
+};
+
+console.log(breadthSum(node1));
+
+// ------------- es 5
+
+var min = (head) => {
+  if (head === null) return Infinity;
+  return Math.min(head.val, min(head.left), min(head.left));
+};
+
+console.log(min(node1));
+
+const breadthMin = (head) => {
+  if (head === null) return 0;
+  const queue = [head];
+  let minGlobal = Infinity;
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    let temp = current.val;
+    minGlobal = Math.min(minGlobal, temp);
+    if (current.left) queue.push(current.left);
+    if (current.right) queue.push(current.right);
+  }
+  return minGlobal;
+};
+
+console.log(breadthMin(node1));
+
+// ------------ es 6
+
+var maxVal = (head) => {
+  if (head === null) return -Infinity;
+  return Math.max(head.val, maxVal(head.left), maxVal(head.right));
+};
+
+console.log(maxVal(node1));
+
+var breadthMax = (head) => {
+  if (head === null) return 0;
+  let maxGlobal = -Infinity;
+  let stack = [head];
+
+  while (stack.length > 0) {
+    const current = stack.shift();
+    let temp = current.val;
+    maxGlobal = Math.max(maxGlobal, temp);
+    if (current.left) stack.push(current.left);
+    if (current.right) stack.push(current.right);
+  }
+  return maxGlobal;
+};
