@@ -54,7 +54,7 @@ node7.left = node11;
 var maxDepth = function (root) {
   if (!root) return 0;
 
-  return Math.max(maxDepth(root.right), maxDepth(root.left)) +1
+  return Math.max(maxDepth(root.right), maxDepth(root.left)) + 1;
 };
 
 console.log(maxDepth(node0));
