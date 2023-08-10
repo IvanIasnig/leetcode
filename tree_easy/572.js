@@ -38,7 +38,9 @@ subNode1.right = subNode3;
 
 
 var isSubtree = function (root, subRoot) {
-
+    console.log(String(root))
+    console.log(JSON.stringify(subRoot))
+    console.log("__________")
   if (!root) return false;
   if (JSON.stringify(root) == JSON.stringify(subRoot)) return true;
 
