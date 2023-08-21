@@ -82,7 +82,7 @@ var treeIncludes = (head, value) => {
   if (head === null) return false;
   if (head.val === value) return true;
 
-  return treeIncludes(head.left, value) || treeIncludes(head.left, value);
+  return treeIncludes(head.right, value) || treeIncludes(head.left, value);
 };
 
 // console.log(treeIncludes(node1, 4));
