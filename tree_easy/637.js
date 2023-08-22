@@ -29,7 +29,7 @@ var averageOfLevels = function (root) {
     let temp = c;
 
     if (c == stack.length) {
-      tot = 0;
+      let tot = 0;
       for (i = 0; i < stack.length; i++) {
         tot += stack[i].val;
       }
