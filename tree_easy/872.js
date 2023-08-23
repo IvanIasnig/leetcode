@@ -86,11 +86,11 @@ var leafSimilar = function (root1, root2) {
     if (current2.right) stack2.push(current2.right);
   }
 
-  console.log(arr1, arr2)
+  console.log(arr1, arr2);
   function arraysAreEqual(arr1, arr2) {
     return JSON.stringify(arr1) === JSON.stringify(arr2);
   }
-  
+
   return arraysAreEqual(arr1, arr2);
 };
 
