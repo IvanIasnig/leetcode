@@ -4,7 +4,6 @@ function TreeNode(val, left = null, right = null) {
   this.right = right;
 }
 
-// Costruisci i nodi partendo dal livello più basso
 const node9 = new TreeNode(9);
 const node1 = new TreeNode(1);
 const node4 = new TreeNode(4);
@@ -18,7 +17,6 @@ const node3 = new TreeNode(3, null, node5);
 const node7_2 = new TreeNode(7, node2, node7);
 const node8 = new TreeNode(8, node1_2, node3);
 
-// Nodo radice
 const root = new TreeNode(6, node7_2, node8);
 
 var sumEvenGrandparent = function (root) {
