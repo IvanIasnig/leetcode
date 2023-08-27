@@ -18,35 +18,26 @@ const root2 = new TreeNode(1, leftNode, rightNode);
 //console.dir(root, { depth: null });
 
 var removeLeafNodes = function (root, target) {
-  let res = root;
-  let rec = (root, target) => {
-    if (root === null) return;
-
-    rec(root.right, target);
-    rec(root.left, target);
-
-    if (
-      root.left &&
-      root.left.val === target &&
-      !root.left.right &&
-      !root.left.left
-    ) {
-      root.left = null;
-    }
-
-    if (
-      root.right &&
-      root.right.val === target &&
-      !root.right.right &&
-      !root.right.left
-    ) {
-      root.right = null;
-    }
+    
+    let res = root;
+    let rec = (root) => {
+      if (root === null) return;
+  
+      rec(root.right);
+      rec(root.left);
+  
+      if (root.left && root.left.val === target && !root.left.right && !root.left.left) {
+        root.left = null;
+      }
+  
+      if (root.right && root.right.val === target && !root.right.right && !root.right.left) {
+        root.right = null;
+      }
+    };
+    rec(root);
+    if(res.val === target && !res.right && !res.left) return null;
+    return res;
   };
-  rec(root, target);
-  if (res.val === target && !res.right && !res.left) return null;
-  return res;
-};
 
 console.dir(removeLeafNodes(root, 2), { depth: null });
 console.dir("-------------", { depth: null });
