@@ -2,7 +2,7 @@ public class Unoottounosei {
     public String truncateSentence(String s, int k) {
         String[] x = s.split(" ");
 
-        String[] ans = new String[k] ;
+        String[] ans = new String[k];
 
         for(int i=0; i<k; i++){
             ans[i] = x[i];
