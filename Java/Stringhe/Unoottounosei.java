@@ -1,4 +1,4 @@
-public class Unoottounosette {
+public class Unoottounosei {
     public String truncateSentence(String s, int k) {
         String[] x = s.split(" ");
 
@@ -14,7 +14,7 @@ public class Unoottounosette {
     public static void main(String[] var0) {
         String b = "Ciao sono Ivan come stai?";
         int par = 4;
-        Unoottounosette tester = new Unoottounosette();
+        Unoottounosei tester = new Unoottounosei();
         System.out.println(tester.truncateSentence(b, par));
     }
 
