@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Unoottotredue {
     public boolean checkIfPangram(String sentence) {
         String[]arr = sentence.split("");
